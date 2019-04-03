@@ -1,0 +1,24 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nodejs"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "miary",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "install": "^0.12.2",
+    "pug": "^2.0.3"
+  }
+}
