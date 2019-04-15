@@ -1,0 +1,23 @@
+[
+    {
+        "Nom": "Miary",
+        "Prenom": "Lafatra",
+        "Image":  "/assets/Miary.jpeg"
+    },
+    {
+        "Nom": "Tahina",
+        "Prenom": "Henintsoa",
+        "Image": "/assets/Tahina.jpeg"
+    },
+    {
+        "Nom": "Rado",
+        "Prenom": "Herinirina",
+        "Image": "/assets/Rado.jpeg"
+    },
+    {
+        "Nom": "Andry",
+        "Prenom": "Andrian",
+        "Image": "/assets/Andry.jpeg"
+    }
+]
+   
