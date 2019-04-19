@@ -3,6 +3,11 @@ var cors = require('cors')
 const app = express()
 const router = express.Router()
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override')
+app.use(methodOverride('X-HTTP-Method')) 
+app.use(methodOverride('X-HTTP-Method-Override'))
+app.use(methodOverride('X-Method-Override'))
+app.use(methodOverride('_method'))
 
 const rout = require('./Route/route')
 

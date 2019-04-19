@@ -45,9 +45,6 @@ module.exports = function (app){
         try {
              var r = fs.readFileSync('./Model/test.json', 'utf8')
              var s = JSON.parse(r)
-/*              var count = Math.max(s.length)
-             var Id = count +1
- */
              var Id = s[s.length-1].Id +1;
              s.push({"Id":Id,"Nom":Nom,"Prenom":Prenom})
         
@@ -56,7 +53,8 @@ module.exports = function (app){
         }
         fs.writeFileSync('./Model/test.json',JSON.stringify(s))
    
-        res.send(s)
+     //    res.send(s)
+     res.redirect('http://localhost:3000/test')
         //console.log(s);
         
    
@@ -64,23 +62,24 @@ module.exports = function (app){
    
    app.put('/test',function(req, res){
         var Id = req.body.Id
-        var Nom = req.body.Nom
-        var Prenom = req.body.Prenom
+        var nom = req.body.Nom
+        var prenom = req.body.Prenom
         var r = fs.readFileSync('./Model/test.json', 'utf8')
         var s = JSON.parse(r)
         for(let i=0;i<s.length;i++){
         if(s[i].Id== Id){
    
-             if(typeof Nom=="string"){
-                  s[i].Nom=Nom;
+             if( nom){
+                  s[i].Nom=nom;
              }
-             if(typeof Prenom=="string"){
-                  s[i].Prenom=Prenom;
+             if(prenom){
+                  s[i].Prenom=prenom;
              }
         }
         }
              console.log(s); 
-             res.send(s)
+          //    res.send(s)
+          res.redirect('http://localhost:3000/test')
              fs.writeFileSync('./Model/test.json',JSON.stringify(s))
         
    
@@ -96,7 +95,8 @@ module.exports = function (app){
                        s.splice(i,1)
                   }    
              }
-                   res.send(s) 
+               //     res.send(s) 
+               res.redirect('http://localhost:3000/test')
                    fs.writeFileSync('./Model/test.json', JSON.stringify(s))
                   
                    console.log(s); 
